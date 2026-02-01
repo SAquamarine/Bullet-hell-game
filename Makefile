@@ -25,4 +25,4 @@ mainB: mainB.o grille.o pion.o affichageMain.o game.o player.o
 	gcc -o mainB mainB.o grille.o pion.o affichageMain.o game.o player.o -lncursesw
 
 clean:
-	rm -f *.o mainA mainB
+	rm -f *.o mainB
