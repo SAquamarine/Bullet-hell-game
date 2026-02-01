@@ -1,4 +1,4 @@
-all: mainA mainB
+all: mainB
 
 grille.o: grille.c grille.h
 	gcc -c -Wall grille.c
@@ -20,9 +20,6 @@ mainA.o: mainA.c affichageMain.h pion.h grille.h
 
 mainB.o: mainB.c affichageMain.h pion.h grille.h game.h
 	gcc -c -Wall mainB.c
-
-mainA: mainA.o grille.o pion.o affichageMain.o
-	gcc -o mainA mainA.o grille.o pion.o affichageMain.o -lncursesw
 
 mainB: mainB.o grille.o pion.o affichageMain.o game.o player.o
 	gcc -o mainB mainB.o grille.o pion.o affichageMain.o game.o player.o -lncursesw
